@@ -1,25 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
+import { SeachForm } from './SearchForm'
+
 export const Discover: React.FC = () => {
   return (
-    <div className="h-[600px] bg-[#f8f8f8] relative flex items-center">
-      <div className="max-w-7xl w-[80rem] mx-auto">
-        <div className="w-96 h-max">
-          <h2 className="text-5xl leading-[1.4] font-semibold">
-            Discover <br />
-            more than <br /> <span className="text-[#26A4FF]">500+ Jobs</span>
-          </h2>
-          <div className="text-[#9EA3B1] text-sm">
-            Great platform for the job seeker that searching for new career
-            heights and passionate about startups.
+    <>
+      <div className="bg-[#f2f5ff] h-[500px] flex items-center justify-center">
+        <div className="text-center max-w-[580px] mt-[-80px]">
+          <h1 className="text-dark text-[46px] font-[500] leading-[1.35em]">
+            Job Board for Developers, Designers, and Marketers
+          </h1>
+          <div className="mt-4 text-grey text-base leading-8">
+            Jobs is a curated job board of the best jobs for developers,
+            designers and marketers in the tech industry.
           </div>
         </div>
-        <img
-          className="h-[600px] w-auto absolute right-[150px] bottom-0"
-          alt="human"
-          src="/man.png"
-        />
       </div>
-    </div>
+      <SeachForm />
+    </>
   )
 }
