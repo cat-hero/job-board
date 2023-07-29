@@ -22,9 +22,9 @@ const CustomLink = ({
 
 const Header = () => {
   return (
-    <div className="max-w-7xl mx-auto flex items-center justify-around text-dark text-base my-[24px]">
+    <div className="flex items-center justify-between text-dark text-base my-[24px]">
       <CustomLink to="/">
-        <img src="/logo.svg" alt="logo" />
+        <img src="/svg/logo.svg" alt="logo" />
       </CustomLink>
       <div className="flex gap-6">
         <CustomLink to="/">Home</CustomLink>

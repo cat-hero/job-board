@@ -1,20 +1,22 @@
-'use client'
+"use client";
 import React from 'react'
 import 'boxicons'
 import { Button } from '@/components/Button'
-const Outline = ({
+export const Outline = ({
   children,
   className = '',
 }: {
   children: any
   className?: string
 }) => {
+  console.log(className)
   return (
     <div
       className={`w-max h-max px-[20px] py-[8px] rounded-[40px] border-[#e4e4ed] border-[1px] 
-      flex items-center gap-3 ${className} 
+      flex items-center gap-3 border-solid ${className} 
       `}
     >
+      {console.log('-----------------------')}
       {children}
     </div>
   )
@@ -57,16 +59,6 @@ export const SeachForm: React.FC = () => {
             {/* <Dropdown /> */}
           </form>
         </Outline>
-      </div>
-      <div className="mt-[120px] flex items-center justify-between">
-        <div>Trusted by</div>
-        <div className="flex gap-[30px]">
-          <img src="./google.svg" />
-          <img src="./facebook.svg" />
-          <img src="./youtube.svg" />
-          <img src="./pinterest.svg" />
-          <img src="./webflow.svg" />
-        </div>
       </div>
     </>
   )
