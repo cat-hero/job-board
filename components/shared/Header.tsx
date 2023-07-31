@@ -22,7 +22,7 @@ const CustomLink = ({
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between text-dark text-base my-[24px]">
+    <nav className="flex items-center justify-between text-dark text-base my-[24px]">
       <CustomLink to="/">
         <img src="/svg/logo.svg" alt="logo" />
       </CustomLink>
@@ -35,7 +35,7 @@ const Header = () => {
       <CustomLink to="/post">
         <Button>Post a job</Button>
       </CustomLink>
-    </div>
+    </nav>
   )
 }
 export default Header

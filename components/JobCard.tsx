@@ -1,8 +1,8 @@
 'use client'
 import React from 'react'
 import { Outline } from '@/components/SearchForm'
-import tailWindConfig from '@/tailwind.config'
-import { Type } from '@/type'
+
+import { JobTypes } from '@/type'
 const infos = [
   {
     label: 'Location',
@@ -22,34 +22,11 @@ const infos = [
 ]
 // Todo: Hover latetest jobs
 
-const greyColor = tailWindConfig.theme?.extend?.colors?.grey ?? 'grey'
-const getConfig = (type: Type = Type.latest) => {
-  if (type === Type.latest) {
-    return {
-      borderColor: greyColor,
-      bgColor: 'white',
-    }
-  } else {
-    return {
-      borderColor: '#ffde6a',
-      bgColor: '#fffefa',
-    }
-  }
-}
-
-export const JobCard = ({ type = Type.latest }: { type?: Type }) => {
+export const JobCard = ({ type = JobTypes.latest }: { type?: JobTypes }) => {
   // const config = getConfig(type);
-  const config = {
-    borderColor: '#ffde6a',
-    bgColor: '#fffefa',
-  }
-  console.log(`!border-[${config.borderColor}]`)
   return (
     <>
-      {console.log('render')}
-      <Outline
-        className={`!rounded-[20px] mt-5 !px-4 !py-5 !border-[#ffde6a] !bg-[${config.bgColor}] cursor-pointer hover:-translate-y-1 transition-all !duration-500 ease-in-out`}
-      >
+      <Outline jobCardType={type}>
         <div className="flex items-center">
           <img
             src="./webflow-blue.svg"
